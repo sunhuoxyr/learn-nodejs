@@ -1,0 +1,620 @@
+Statistical profiling result from isolate-0x110008000-22936-v8.log, (491 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     13    2.6%          /usr/lib/system/libsystem_malloc.dylib
+     12    2.4%          /usr/lib/system/libsystem_pthread.dylib
+      5    1.0%          /usr/lib/system/libsystem_platform.dylib
+      5    1.0%          /usr/lib/system/libsystem_kernel.dylib
+      3    0.6%          /usr/lib/system/libsystem_c.dylib
+      1    0.2%          /usr/lib/libc++abi.dylib
+      1    0.2%          /usr/lib/libc++.1.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.6%    0.7%  LazyCompile: *normalizeString path.js:59:25
+      1    0.2%    0.2%  RegExp: ^\/[\/#\?]?$
+      1    0.2%    0.2%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:597:37
+
+ [C++]:
+   ticks  total  nonlib   name
+    226   46.0%   50.1%  T __ZN2v88internal8Builtins5IsCppEi
+     52   10.6%   11.5%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     33    6.7%    7.3%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     23    4.7%    5.1%  T __kernelrpc_mach_port_set_attributes
+     17    3.5%    3.8%  T _mach_make_memory_entry_64
+     11    2.2%    2.4%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10    2.0%    2.2%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10    2.0%    2.2%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      7    1.4%    1.6%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      5    1.0%    1.1%  T _mig_strncpy_zerofill
+      5    1.0%    1.1%  T _mach_port_allocate
+      5    1.0%    1.1%  T _host_get_clock_service
+      4    0.8%    0.9%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.4%    0.4%  t __ZN4nodeL9EnvGetterEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_5ValueEEE
+      2    0.4%    0.4%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.4%    0.4%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+      2    0.4%    0.4%  T _vm_copy
+      2    0.4%    0.4%  T _mach_ports_register
+      2    0.4%    0.4%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.4%    0.4%  T __ZN4node10contextify16ContextifyScript3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.4%    0.4%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      1    0.2%    0.2%  t __ZNK2v88internal10ScopedListIPNS0_9StatementEPvE6CopyToEPNS0_8ZoneListIS3_EEPNS0_4ZoneE
+      1    0.2%    0.2%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      1    0.2%    0.2%  t __ZN4node2fsL4StatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  t __ZN2v8L15InternalFieldOKENS_8internal6HandleINS0_10JSReceiverEEEiPKc
+      1    0.2%    0.2%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      1    0.2%    0.2%  t __ZN2v84base19TemplateHashMapImplIPvS2_NS0_26HashEqualityThenKeyMatcherIS2_PFbS2_S2_EEENS0_23DefaultAllocationPolicyEE6ResizeES7_
+      1    0.2%    0.2%  T _task_info
+      1    0.2%    0.2%  T _task_get_special_port
+      1    0.2%    0.2%  T _proc_setpcontrol
+      1    0.2%    0.2%  T _posix_spawnattr_destroy
+      1    0.2%    0.2%  T __ZNK2v88internal15FunctionLiteral13language_modeEv
+      1    0.2%    0.2%  T __ZNK2v88internal12AstRawString12AsArrayIndexEPj
+      1    0.2%    0.2%  T __ZN4node7TCPWrap5Bind6ERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  T __ZN4node6loader10ModuleWrap11InstantiateERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.2%    0.2%  T __ZN4node2fs6AccessERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  T __ZN4node2fs5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.2%    0.2%  T __ZN4node10contextify17ContextifyContext11MakeContextERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.2%    0.2%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      1    0.2%    0.2%  T __ZN2v88internal8Builtins11CallableForEPNS0_7IsolateENS1_4NameE
+      1    0.2%    0.2%  T __ZN2v88internal5Scope6LookupILNS1_15ScopeLookupModeE0EEEPNS0_8VariableEPNS0_13VariableProxyEPS1_S8_S8_b
+
+ [Summary]:
+   ticks  total  nonlib   name
+      5    1.0%    1.1%  JavaScript
+    444   90.4%   98.4%  C++
+     75   15.3%   16.6%  GC
+     40    8.1%          Shared libraries
+      2    0.4%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    219   58.1%   44.6%  T __ZN2v88internal8Builtins5IsCppEi
+    143   37.9%   29.1%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      3    0.8%    0.6%  T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+      3    0.8%    0.6%  T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      2    0.5%    0.4%  T _mach_ports_register
+      2    0.5%    0.4%  T __ZN2v88internal21Builtin_JsonStringifyEiPmPNS0_7IsolateE
+      1    0.3%    0.2%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.3%    0.2%  T _task_get_special_port
+      1    0.3%    0.2%  T __ZN2v88internal38Builtin_CallSitePrototypeGetLineNumberEiPmPNS0_7IsolateE
+      1    0.3%    0.2%  T __ZN2v88internal27Builtin_FunctionConstructorEiPmPNS0_7IsolateE
+      1    0.3%    0.2%  T __ZN2v88internal16Builtin_ArrayPopEiPmPNS0_7IsolateE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    226   46.0%  T __ZN2v88internal8Builtins5IsCppEi
+     81   35.8%    T __ZN2v88internal8Builtins5IsCppEi
+     11   13.6%      T __ZN2v88internal8Builtins5IsCppEi
+      1    9.1%        LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      1    9.1%        LazyCompile: ~resolvePackageTargetString internal/modules/esm/resolve.js:312:36
+      1  100.0%          LazyCompile: ~resolvePackageTarget internal/modules/esm/resolve.js:366:30
+      1  100.0%            LazyCompile: ~packageExportsResolve internal/modules/esm/resolve.js:462:31
+      1    9.1%        LazyCompile: ~replaceXRange /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/make-dir/node_modules/semver/semver.js:1088:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/make-dir/node_modules/semver/semver.js:1083:41
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    9.1%        LazyCompile: ~replaceCaret /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/semver/semver.js:1103:23
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/semver/semver.js:1098:48
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    9.1%        LazyCompile: ~populateMaps /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/mime-types/index.js:154:23
+      1  100.0%          Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/mime-types/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    9.1%        LazyCompile: ~matchPattern /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-chain.js:546:22
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-chain.js:543:24
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    9.1%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    9.1%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~resolveMainPath internal/modules/run_main.js:12:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+      1    9.1%        LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers-schema/parse.js:712:36
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~parse /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers-schema/parse.js:621:22
+      1    9.1%        LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/full.js:202:82
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/gensync-utils/async.js:23:43
+      1    9.1%        Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/generator/lib/printer.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      7    8.6%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/traverse/lib/path/index.js:1:1
+      7  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      7  100.0%          LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      7  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      3    3.7%      LazyCompile: ~nextTick internal/process/task_queues.js:103:18
+      1   33.3%        LazyCompile: ~resOnFinish _http_server.js:761:21
+      1  100.0%          LazyCompile: ~emit events.js:324:44
+      1  100.0%            LazyCompile: ~onFinish _http_outgoing.js:790:18
+      1   33.3%        LazyCompile: ~load /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/register/lib/cache.js:83:14
+      1  100.0%          LazyCompile: ~register /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/register/lib/node.js:130:18
+      1  100.0%            Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/register/lib/nodeWrapper.js:1:1
+      1   33.3%        LazyCompile: ~emitReadable internal/streams/readable.js:535:22
+      1  100.0%          LazyCompile: ~onEofChunk internal/streams/readable.js:505:20
+      1  100.0%            LazyCompile: ~readableAddChunk internal/streams/readable.js:212:26
+      3    3.7%      LazyCompile: ~getOptions internal/fs/utils.js:287:20
+      3  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+      2   66.7%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      2  100.0%            LazyCompile: ~newLoader /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:79:64
+      1   33.3%          LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1119:39
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      2    2.5%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      2  100.0%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      2  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      2    2.5%      LazyCompile: *realpathSync fs.js:1718:22
+      2  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      1   50.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1   50.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      1    1.2%      LazyCompile: ~writeHead _http_server.js:254:19
+      1  100.0%        LazyCompile: ~_implicitHeader _http_server.js:249:68
+      1  100.0%          LazyCompile: ~write_ _http_outgoing.js:704:16
+      1  100.0%            LazyCompile: ~end _http_outgoing.js:795:45
+      1    1.2%      LazyCompile: ~value internal/console/constructor.js:223:20
+      1  100.0%        Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1    1.2%      LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      1  100.0%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      1  100.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:306:20
+      1    1.2%      LazyCompile: ~setFunctionMetadata /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/gensync/index.js:340:29
+      1  100.0%        LazyCompile: ~buildOperation /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/gensync/index.js:205:24
+      1  100.0%          LazyCompile: ~newGenerator /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/gensync/index.js:144:22
+      1  100.0%            LazyCompile: ~gensync /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/gensync/index.js:15:19
+      1    1.2%      LazyCompile: ~set /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/response.js:461:6
+      1  100.0%        LazyCompile: ~set type /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/response.js:310:11
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/delegates/index.js:91:40
+      1    1.2%      LazyCompile: ~resolveShowConfigPath /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/configuration.js:304:32
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~loadPrivatePartialConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/partial.js:75:35
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    1.2%      LazyCompile: ~resolve path.js:1067:10
+      1  100.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.2%      LazyCompile: ~realpathSync fs.js:1718:22
+      1  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      1  100.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1  100.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:306:20
+      1    1.2%      LazyCompile: ~patchProcessObject internal/bootstrap/pre_execution.js:74:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:20:36
+      1  100.0%          Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    1.2%      LazyCompile: ~onconnection net.js:1533:22
+      1    1.2%      LazyCompile: ~onSocket /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/on-finished/index.js:106:20
+      1  100.0%        LazyCompile: ~attachFinishedListener /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/on-finished/index.js:90:32
+      1  100.0%          LazyCompile: ~attachListener /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/on-finished/index.js:140:24
+      1  100.0%            LazyCompile: ~onFinished /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/on-finished/index.js:45:20
+      1    1.2%      LazyCompile: ~normalizeOptions /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-chain.js:433:26
+      1  100.0%        LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-chain.js:159:49
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~buildRootChain /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-chain.js:68:25
+      1    1.2%      LazyCompile: ~makeNodeErrorWithCode internal/errors.js:275:31
+      1  100.0%        LazyCompile: ~E internal/errors.js:348:11
+      1  100.0%          Eval: ~<anonymous> internal/errors.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    1.2%      LazyCompile: ~loadOneConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/configuration.js:145:24
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~findRelativeConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/configuration.js:111:29
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    1.2%      LazyCompile: ~line /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/generate-function/index.js:115:22
+      1  100.0%        LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:227:22
+      1  100.0%          LazyCompile: ~forEach /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:206:28
+      1  100.0%            LazyCompile: ~compileMessage /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:173:33
+      1    1.2%      LazyCompile: ~isIterableIterator /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/util.js:29:28
+      1  100.0%        LazyCompile: ~cachedFunction /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/caching.js:54:34
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~mergeChainOpts /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-chain.js:413:25
+      1    1.2%      LazyCompile: ~isDate /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/kind-of/index.js:81:16
+      1  100.0%        LazyCompile: ~kindOf /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/kind-of/index.js:3:33
+      1  100.0%          LazyCompile: ~cloneDeep /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/clone-deep/index.js:11:19
+      1  100.0%            LazyCompile: ~compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/register/lib/node.js:56:17
+      1    1.2%      LazyCompile: ~gen /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/generate-object-property/index.js:3:19
+      1  100.0%        LazyCompile: ~forEach /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:206:28
+      1  100.0%          LazyCompile: ~compileMessage /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%            LazyCompile: ~resolve /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:505:26
+      1    1.2%      LazyCompile: ~fillUsage /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/browserslist/index.js:79:20
+      1  100.0%        Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/browserslist/index.js:1187:11
+      1  100.0%          Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/browserslist/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    1.2%      LazyCompile: ~emit events.js:324:44
+      1  100.0%        LazyCompile: ~endReadableNT internal/streams/readable.js:1310:23
+      1  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      1    1.2%      LazyCompile: ~dispatch /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-router/lib/router.js:338:35
+      1  100.0%        LazyCompile: ~dispatch /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-compose/index.js:35:23
+      1  100.0%          LazyCompile: ~serve /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-static/index.js:39:33
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    1.2%      LazyCompile: ~dispatch /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-compose/index.js:35:23
+      1  100.0%        LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-compose/index.js:31:19
+      1  100.0%          LazyCompile: ~dispatch /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-router/lib/router.js:338:35
+      1  100.0%            LazyCompile: ~dispatch /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-compose/index.js:35:23
+      1    1.2%      LazyCompile: ~deriveBFS /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/color-convert/route.js:32:19
+      1  100.0%        LazyCompile: ~module.exports /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/color-convert/route.js:78:27
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/color-convert/index.js:61:25
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    1.2%      LazyCompile: ~data /Users/sunhuo/workspace/github/learn-nodejs/homePage/node/getData.js:4:34
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~module.exports /Users/sunhuo/workspace/github/learn-nodejs/homePage/node/getData.js:3:33
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node/index.js:26:17
+      1    1.2%      LazyCompile: ~createToken /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/parser/lib/index.js:974:21
+      1  100.0%        Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/parser/lib/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      1    1.2%      LazyCompile: ~createHttpErrorConstructor /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/http-errors/index.js:118:37
+      1  100.0%        Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/http-errors/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      1    1.2%      LazyCompile: ~connectionListenerInternal _http_server.js:423:36
+      1  100.0%        LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:426:36
+      1  100.0%          LazyCompile: ~connectionListener _http_server.js:417:28
+      1  100.0%            LazyCompile: ~emit events.js:324:44
+      1    1.2%      LazyCompile: ~compileMessage /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:173:33
+      1  100.0%        LazyCompile: ~resolve /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:505:26
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:528:75
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    1.2%      LazyCompile: ~callback internal/streams/writable.js:511:44
+      1  100.0%        LazyCompile: ~afterWrite internal/streams/writable.js:456:20
+      1  100.0%          LazyCompile: ~afterWriteTick internal/streams/writable.js:451:24
+      1  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      1    1.2%      LazyCompile: ~callback /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/application.js:143:11
+      1  100.0%        LazyCompile: ~listen /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/application.js:79:9
+      1  100.0%          Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1    1.2%      LazyCompile: ~cache internal/http.js:18:15
+      1  100.0%        LazyCompile: ~utcDate internal/http.js:13:17
+      1  100.0%          LazyCompile: ~_storeHeader _http_outgoing.js:362:22
+      1  100.0%            LazyCompile: ~writeHead _http_server.js:254:19
+      1    1.2%      LazyCompile: ~_storeHeader _http_outgoing.js:362:22
+      1  100.0%        LazyCompile: ~writeHead _http_server.js:254:19
+      1  100.0%          LazyCompile: ~_implicitHeader _http_server.js:249:68
+      1  100.0%            LazyCompile: ~write_ _http_outgoing.js:704:16
+      1    1.2%      LazyCompile: ~_onceWrap events.js:486:19
+      1  100.0%        LazyCompile: ~once events.js:494:44
+      1  100.0%          LazyCompile: ~Socket._read net.js:579:34
+      1  100.0%            LazyCompile: ~Readable.read internal/streams/readable.js:371:35
+      1    1.2%      LazyCompile: ~_addHeaderLine _http_incoming.js:270:24
+      1  100.0%        LazyCompile: ~_addHeaderLines _http_incoming.js:136:25
+      1  100.0%          LazyCompile: ~parserOnHeadersComplete _http_common.js:75:33
+      1    1.2%      LazyCompile: ~Writable internal/streams/writable.js:218:18
+      1  100.0%        LazyCompile: ~Duplex internal/streams/duplex.js:52:16
+      1  100.0%          LazyCompile: ~Socket net.js:269:16
+      1  100.0%            LazyCompile: ~WriteStream tty.js:85:21
+      1    1.2%      LazyCompile: ~Socket._write net.js:798:35
+      1  100.0%        LazyCompile: ~writeOrBuffer internal/streams/writable.js:334:23
+      1  100.0%          LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+      1  100.0%            LazyCompile: ~value internal/console/constructor.js:258:20
+      1    1.2%      LazyCompile: ~ReadableState internal/streams/readable.js:71:23
+      1  100.0%        LazyCompile: ~Readable internal/streams/readable.js:168:18
+      1  100.0%          LazyCompile: ~Duplex internal/streams/duplex.js:52:16
+      1  100.0%            LazyCompile: ~Socket net.js:269:16
+      1    1.2%      LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%        LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1  100.0%          LazyCompile: ~require internal/modules/cjs/helpers.js:91:31
+      1  100.0%            Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/resolve-path/node_modules/http-errors/index.js:1:1
+      1    1.2%      LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1    1.2%      LazyCompile: ~EventEmitter.init events.js:191:29
+      1  100.0%        LazyCompile: ~EventEmitter events.js:82:22
+      1  100.0%          LazyCompile: ~Stream internal/streams/legacy.js:10:16
+      1  100.0%            LazyCompile: ~Readable internal/streams/readable.js:168:18
+      1    1.2%      LazyCompile: ~ConfigItem /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/item.js:48:14
+      1  100.0%        LazyCompile: ~createItemFromDescriptor /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/item.js:22:34
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/partial.js:124:38
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    1.2%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/delegates/index.js:91:40
+      1  100.0%        LazyCompile: ~onerror /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/context.js:107:10
+      1  100.0%          LazyCompile: ~onerror /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/application.js:165:21
+      1  100.0%            t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    1.2%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/delegates/index.js:71:40
+      1  100.0%        LazyCompile: ~onerror /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/context.js:107:10
+      1  100.0%          LazyCompile: ~onerror /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa/lib/application.js:165:21
+      1  100.0%            t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    1.2%      LazyCompile: *resolve path.js:1067:10
+      1  100.0%        LazyCompile: ~realpathSync fs.js:1718:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:361:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      1    1.2%      Eval: ~<anonymous> internal/encoding.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    1.2%      Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      1  100.0%            LazyCompile: ~setupBuffer internal/bootstrap/node.js:300:21
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/caniuse-lite/data/agents.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/retrievers/getBindingIdentifiers.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/definitions/core.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/builders/generated/uppercase.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/asserts/generated/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/traverse/lib/scope/index.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1    1.2%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/generator/lib/generators/flow.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      6    2.7%    LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      3    1.3%    T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+      1   33.3%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/index.js:485:43
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1   33.3%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/index.js:447:42
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1   33.3%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/index.js:433:43
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/types/lib/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      3    1.3%    T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      2   66.7%      LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1119:39
+      2  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      2  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1   33.3%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      1  100.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      3    1.3%    LazyCompile: ~resolve path.js:1067:10
+      2   66.7%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      2  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      2  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1   33.3%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+      1  100.0%        LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:289:26
+      1  100.0%          LazyCompile: ~trySelf internal/modules/cjs/loader.js:409:17
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      3    1.3%    LazyCompile: ~pushAsyncContext internal/async_hooks.js:506:26
+      3  100.0%      LazyCompile: ~emitBeforeScript internal/async_hooks.js:476:26
+      3  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+
+     52   10.6%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     52  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     52  100.0%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:986:18
+     52  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+     27   51.9%          LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+     27  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+     25   48.1%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+     25  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+
+     33    6.7%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     33  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     33  100.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+     30   90.9%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      4   13.3%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      3   10.0%          Eval: ~<anonymous> events.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3   10.0%          Eval: ~<anonymous> crypto.js:1:1
+      3  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:252:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    3.3%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:300:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    3.3%          LazyCompile: ~initializeReport internal/bootstrap/pre_execution.js:167:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:20:36
+      1    3.3%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:425:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:20:36
+      1    3.3%          LazyCompile: ~createGlobalConsole internal/bootstrap/node.js:317:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    3.3%          Eval: ~<anonymous> stream.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/worker/io.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/process/esm_loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/modules/package_json_reader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/modules/esm/get_source.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> http.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> _http_server.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    3.3%          Eval: ~<anonymous> _http_client.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      3    9.1%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      3  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      3  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+
+     23    4.7%  T __kernelrpc_mach_port_set_attributes
+      8   34.8%    T __ZN2v88internal8Builtins5IsCppEi
+      1   12.5%      T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%        LazyCompile: ~getOwn internal/bootstrap/loaders.js:154:16
+      1  100.0%          LazyCompile: ~syncExports internal/bootstrap/loaders.js:261:14
+      1  100.0%            LazyCompile: ~<anonymous> internal/bootstrap/loaders.js:247:15
+      1   12.5%      LazyCompile: ~using /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/caching.js:224:8
+      1  100.0%        LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-descriptors.js:83:71
+      1  100.0%          LazyCompile: ~cachedFunction /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/caching.js:54:34
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1   12.5%      LazyCompile: ~send /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-send/index.js:50:21
+      1  100.0%        LazyCompile: ~serve /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-static/index.js:39:33
+      1  100.0%          LazyCompile: ~dispatch /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-compose/index.js:35:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/koa-compose/index.js:31:19
+      1   12.5%      LazyCompile: ~resolveTargets /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/resolve-targets.js:35:24
+      1  100.0%        LazyCompile: ~loadPrivatePartialConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/partial.js:75:35
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~loadFullConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/full.js:52:51
+      1   12.5%      LazyCompile: ~parserOnIncoming _http_server.js:823:26
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete _http_common.js:75:33
+      1   12.5%      LazyCompile: ~packageExportsResolve internal/modules/esm/resolve.js:462:31
+      1  100.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      1   12.5%      LazyCompile: ~SemVer /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/semver/semver.js:300:17
+      1  100.0%        LazyCompile: ~Comparator.parse /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/semver/semver.js:789:39
+      1  100.0%          LazyCompile: ~Comparator /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/semver/semver.js:754:21
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/semver/semver.js:974:26
+      1   12.5%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/plugins.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+
+     17    3.5%  T _mach_make_memory_entry_64
+
+     13    2.6%  /usr/lib/system/libsystem_malloc.dylib
+     11   84.6%    T __ZN2v88internal8Builtins5IsCppEi
+      2   18.2%      T __ZN2v88internal8Builtins5IsCppEi
+      1   50.0%        LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      1  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      1   50.0%        Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/generator/lib/generators/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%            LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      2   18.2%      LazyCompile: ~nextTick internal/process/task_queues.js:103:18
+      1   50.0%        LazyCompile: ~endReadable internal/streams/readable.js:1300:21
+      1  100.0%          LazyCompile: ~Readable.read internal/streams/readable.js:371:35
+      1  100.0%            LazyCompile: ~resume_ internal/streams/readable.js:955:17
+      1   50.0%        LazyCompile: ~<anonymous> internal/streams/destroy.js:39:30
+      1  100.0%          LazyCompile: ~Socket._destroy net.js:655:37
+      1  100.0%            LazyCompile: ~destroy internal/streams/destroy.js:5:17
+      1    9.1%      LazyCompile: ~shouldUseESMLoader internal/modules/run_main.js:27:28
+      1  100.0%        LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+      1  100.0%          Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    9.1%      LazyCompile: ~newLoader /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:79:64
+      1  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1    9.1%      LazyCompile: ~loadPrivatePartialConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/partial.js:75:35
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~loadFullConfig /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/full.js:52:51
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    9.1%      LazyCompile: ~inherits util.js:217:18
+      1  100.0%        LazyCompile: ~createClientErrorConstructor /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/resolve-path/node_modules/http-errors/index.js:131:39
+      1  100.0%          LazyCompile: ~forEachCode /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/resolve-path/node_modules/http-errors/index.js:226:38
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+      1    9.1%      LazyCompile: ~debug /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/debug/src/common.js:66:17
+      1  100.0%        LazyCompile: ~loadPreset /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/plugins.js:77:21
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~createDescriptor /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-descriptors.js:151:27
+      1    9.1%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/validation/plugins.js:54:28
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~validatePluginObject /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/validation/plugins.js:49:30
+      1  100.0%            LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/full.js:259:65
+      1    9.1%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/full.js:259:65
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/gensync-utils/async.js:23:43
+      1  100.0%            T __ZN2v88internal8Builtins5IsCppEi
+
+     12    2.4%  /usr/lib/system/libsystem_pthread.dylib
+      7   58.3%    T __ZN2v88internal8Builtins5IsCppEi
+      1   14.3%      T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%        LazyCompile: ~isProperty /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/is-property/is-property.js:2:20
+      1  100.0%          LazyCompile: ~gen /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/generate-object-property/index.js:3:19
+      1  100.0%            LazyCompile: ~forEach /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/protocol-buffers/compile.js:206:28
+      1   14.3%      LazyCompile: ~resolvePreset /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/plugins.js:58:23
+      1  100.0%        LazyCompile: ~loadPreset /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/files/plugins.js:77:21
+      1  100.0%          T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%            LazyCompile: ~createDescriptor /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/config-descriptors.js:151:27
+      1   14.3%      LazyCompile: ~initSocketHandle net.js:240:26
+      1  100.0%        LazyCompile: ~Socket net.js:269:16
+      1  100.0%          LazyCompile: ~onconnection net.js:1533:22
+      1   14.3%      LazyCompile: ~emitErrorCloseNT internal/streams/destroy.js:73:26
+      1  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      1   14.3%      LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%          LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1   14.3%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/config/index.js:40:32
+      1  100.0%        LazyCompile: ~init /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/core/lib/index.js:254:7
+      1  100.0%          LazyCompile: ~compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/register/lib/node.js:56:17
+      1  100.0%            LazyCompile: ~compileHook /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/register/lib/node.js:100:21
+      1   14.3%      Eval: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/@babel/template/lib/builder.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1039:37
+      1  100.0%          LazyCompile: ~_compile /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:86:43
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+
+     11    2.2%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     11  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     11  100.0%      LazyCompile: ~stat internal/modules/cjs/loader.js:146:14
+      6   54.5%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      6  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      6  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      5   45.5%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:352:17
+      5  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:368:23
+      4   80.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1   20.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:306:20
+
+     10    2.0%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     10  100.0%      LazyCompile: ~readSync fs.js:577:18
+     10  100.0%        LazyCompile: ~tryReadSync fs.js:379:21
+     10  100.0%          LazyCompile: ~readFileSync fs.js:391:22
+      9   90.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      1   10.0%            LazyCompile: ~Module._extensions..json internal/modules/cjs/loader.js:1119:39
+
+     10    2.0%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     10  100.0%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+     10  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:258:21
+     10  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:440:24
+     10  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+
+      7    1.4%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      7  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      7  100.0%      LazyCompile: ~openSync fs.js:489:18
+      7  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+      7  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1094:37
+      4   57.1%            LazyCompile: ~newLoader /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/pirates/lib/index.js:79:64
+      3   42.9%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:938:33
+
+      5    1.0%  T _mig_strncpy_zerofill
+
+      5    1.0%  T _mach_port_allocate
+
+      5    1.0%  T _host_get_clock_service
+
+      5    1.0%  /usr/lib/system/libsystem_platform.dylib
+      2   40.0%    T __ZN2v88internal8Builtins5IsCppEi
+      1   50.0%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:462:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:817:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:725:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:966:36
+      1   50.0%      LazyCompile: ~<anonymous> /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/make-dir/node_modules/semver/semver.js:866:53
+      1  100.0%        T __ZN2v88internal8Builtins5IsCppEi
+      1  100.0%          LazyCompile: ~Range /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/make-dir/node_modules/semver/semver.js:835:16
+      1  100.0%            LazyCompile: ~satisfies /Users/sunhuo/workspace/github/learn-nodejs/homePage/node_modules/make-dir/node_modules/semver/semver.js:1251:20
+
+      5    1.0%  /usr/lib/system/libsystem_kernel.dylib
+
