@@ -1,0 +1,26 @@
+{
+  "name": "learn-nodejs",
+  "version": "1.0.0",
+  "description": "nodeJS 的学习用例",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunhuoxyr/learn-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunhuoxyr/learn-nodejs/issues"
+  },
+  "homepage": "https://github.com/sunhuoxyr/learn-nodejs#readme",
+  "dependencies": {
+    "easy_sock": "^0.4.1",
+    "koa": "^2.13.4",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0"
+  }
+}
